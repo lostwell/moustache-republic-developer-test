@@ -1,0 +1,19 @@
+@import './scss/constants.scss';
+@import './scss/app.scss';
+
+body {
+    margin: 0;
+    font-family: "Inv Maison Neue","Maison Neue",-apple-system,BlinkMacSystemFont,"Open Sans",open-sans,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0.75rem;
+}
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+div{
+  box-sizing: border-box;
+}

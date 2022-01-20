@@ -1,0 +1,108 @@
+.ProductPage__Container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 47px;
+    width: 100%;
+
+    @media only screen and (max-width: 800px) {
+        padding: 20px 50px;
+    }
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+
+    .ProductPage__ImageWrapper{
+        margin-left: 110px;
+        width: 27.8%;
+
+        @media only screen and (max-width: 800px) {
+            margin-left: 0;
+            width: 50%;
+        }
+        @media only screen and (max-width: 600px) {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        .ProductPage__Image{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .ProductPage__Info{
+        margin-left: 155px;
+        width: 32.5%;
+
+        @media only screen and (max-width: 800px) {
+            margin-left: 0;
+            width: 50%;
+        }
+        @media only screen and (max-width: 600px) {
+            margin-left: 0;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        h2{
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin: 0 0 27px 0;
+        }
+
+        .Info__Price{
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .Info__Desc{
+            color: $medium;
+            font-size: 0.8rem;
+            line-height: 20px;
+            margin-bottom: 32px;
+        }
+
+        .Size__Label{
+            color: $medium;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 10px;
+            margin-bottom: 8px;
+
+            .Symbol__Required{
+                color: $red;
+                font-size: 0.84375rem;
+                line-height: 10px;
+                text-transform: none;
+                letter-spacing: normal;
+                font-weight: 500;
+            }
+
+            .Size__Indicator{
+                color: $dark;
+                margin-left: 4px;
+                font-weight: 800;
+            }
+        }
+
+        .Size__ButtonWrapper{
+            margin-bottom: 17px;
+        }
+
+        .Size__Button{
+            margin: 3px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}

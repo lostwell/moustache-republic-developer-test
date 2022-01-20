@@ -1,0 +1,145 @@
+.App__Header{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 2;
+
+    background-color: $header-bg;
+    height: 30px;
+    margin: 15px 47px;
+    padding: 0 155px;
+
+    @media only screen and (max-width: 800px) {
+        margin: 15px 47;
+        padding: 0 50px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        margin: 15px 0;
+        padding: 0 50px;
+    }
+
+    .MiniCart__Button{
+        color: $medium;
+        position: absolute;
+        right: 155px;
+        z-index: 3;
+        padding: 5px 8px;
+        letter-spacing: normal;
+        font-weight: 500;
+        font-size: 11px;
+        height: 105%;
+        border: 1px solid transparent;
+        transition: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+        .MiniCart__Icon{
+            position: relative;
+            display: none;
+            background-image: url('../resources/images/cart.png');
+            width: 12px;
+            height: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-right: 8px;
+            opacity: 0.4;
+        }
+
+        .MiniCart__Text{
+            margin-right: 3px;
+        }
+        
+        @media only screen and (max-width: 800px) {
+            right: 50px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .MiniCart__Text{
+                display: none;
+            }
+            .MiniCart__Icon{
+                display: inline-block;
+            }
+            right: 20px;
+        }
+
+        &:hover{
+            background-color: transparent;
+            color: $medium;
+        }
+
+        &.active{
+            color: $dark;
+            background-color: $light;
+            border-top: 1px solid $light-border;
+            border-right: 1px solid $light-border;
+            border-left: 1px solid $light-border;
+            border-bottom: 1px solid $light;
+            
+            &:hover{
+                color: $dark;
+            }
+            
+            .MiniCart__Icon{
+                opacity: 1;
+            }
+        }
+    }
+
+    .MiniCart__Dropdown{
+        visibility: hidden;
+        position: absolute;
+        right: 155px;
+        top: 100%;
+        z-index: 1;
+        background-color: $light;
+        border: 1px solid $light-border;
+        width: 292px;
+
+        @media only screen and (max-width: 800px) {
+            right: 50px;
+        };
+
+        @media only screen and (max-width: 600px) {
+            right: 20px;
+            width: calc(100% - 40px);
+        }
+
+        &.active{
+            visibility: visible;
+        }
+
+        .MiniCart__Item{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 18px;
+            width: 100%;
+
+            .CartItem__Image{
+                max-width: 70px;
+                height: auto;
+            }
+
+            .CartItem__Info{
+                width: 100%;
+                margin-left: 15px;
+                font-size: 0.8125rem;
+                font-weight: 500;
+
+                & > div{
+                    margin-bottom: 10px;
+
+                    &:last-child{
+                        font-size: 12px;
+                        margin: 15px 0 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
